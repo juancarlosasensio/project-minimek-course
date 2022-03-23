@@ -5,6 +5,7 @@ export default class TabBarContainer extends Component {
     constructor(props) {
         super(props);
 
+        //This line is probably the same as initializing tabs as an array with an obj with a "name" prop and then reassigning its value by destructuring from props. I think...
         const {tabs = [{name : null}]} = props;
         const firstTab = tabs[0];
 
@@ -15,7 +16,7 @@ export default class TabBarContainer extends Component {
 
     onTabClick = (name) => {
         this.setState({currentTab : name});
-    }
+    };
 
     render() {
         const {tabs, ...otherProps} = this.props;
